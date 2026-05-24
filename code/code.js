@@ -445,8 +445,8 @@ const information = {
     2: {title: "类星体", caption: "类星体是位于某些星系中心的超大质量黑洞。当它们吸积周围的气体时，会变得极其明亮，可以在整个宇宙中被观测到。它们的光呈蓝色。在这些距离上，星系已经太暗，斯隆数字巡天望远镜无法观测到。", img: "Images/Explanations/Quasar@300x.png" },
     3: {title: "明亮红星系", caption: "类星体是位于某些星系中心的超大质量黑洞。当它们吸积周围的气体时，会变得极其明亮，可以在整个宇宙中被观测到。它们的光呈蓝色。在这些距离上，星系已经太暗，斯隆数字巡天望远镜无法观测到。", img: "Images/Placeholder images/Example Explanations/LRG.jpeg"},
     4: {title: "近处星系", caption: "每个点都是一个星系。它们共同组成了丝状结构。旋涡星系暗淡且呈蓝色。椭圆星系呈黄色且更加明亮。我们可以在更远处看到它们。", img: "Images/Explanations/Near_placeholder.png" },
-    5: {title: "红移", caption: ""红移"是天文学中的一个关键概念。这个术语可以从字面理解——光的波长被拉伸，因此光看起来向光谱的红色端"偏移"了。声波在声源相对于观察者运动时也会发生类似的现象。", img: "Images/Explanations/Redshift@300x.png"},
-    6: {title: "回溯时间", caption: "从我们在地球上探测到光线到它最初被天体发出之间经过的时间，被称为"回溯时间"。天体离我们越远，我们就是在看越久远的过去。", img: "Images/Explanations/Lookback Time@300x.png" },
+    5: {title: "红移", caption: "“红移”是天文学中的一个关键概念。这个术语可以从字面理解——光的波长被拉伸，因此光看起来向光谱的红色端“偏移”了。声波在声源相对于观察者运动时也会发生类似的现象。", img: "Images/Explanations/Redshift@300x.png"},
+    6: {title: "回溯时间", caption: "从我们在地球上探测到光线到它最初被天体发出之间经过的时间，被称为“回溯时间”。天体离我们越远，我们就是在看越久远的过去。", img: "Images/Explanations/Lookback Time@300x.png" },
     7: {title: "天球角度", caption: "这是天空中这么小的一个切片…… ", img: "Images/Placeholder images/Example Explanations/Example Explanations/Lookback.jpeg" },
     8: {title: "你在这里", caption: "我们目前身处银河系，在太阳系中，在地球上。", img: "Images/Explanations/You are Here@300x.png" },
     9: {title: "星系", caption: "星系是由尘埃、气体、暗物质以及从一百万到一万亿颗恒星组成的庞大系统，它们被引力束缚在一起。几乎所有大型星系的中心都被认为存在超大质量黑洞。", img: "Images/Explanations/Galaxies_wikipedia cropped.png" },
@@ -564,7 +564,7 @@ function zoomlevel() {
 
 const modal_info = {
     1: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/cmb.jpeg", header: "宇宙微波背景辐射", caption: "这是大爆炸后不久、137亿年前发出的第一道闪光的真实照片。这道光已被宇宙膨胀拉伸，以无线电波的形式到达我们这里。这就是可观测宇宙的边缘。"},
-    2: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/12.jpeg", header: "红移类星体", caption: "在这些距离上，宇宙的膨胀如此剧烈，以至于类星体发出的蓝色光子被拉伸而显得更红。再远一些，我们会遇到一个宇宙中充满氢气的时期，氢气阻止了我们今天能观测到的可见光的传播。这个时期被称为"黑暗时代"。"},
+    2: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/12.jpeg", header: "红移类星体", caption: "在这些距离上，宇宙的膨胀如此剧烈，以至于类星体发出的蓝色光子被拉伸而显得更红。再远一些，我们会遇到一个宇宙中充满氢气的时期，氢气阻止了我们今天能观测到的可见光的传播。这个时期被称为“黑暗时代”。"},
     3: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/8.5.jpg", header: "类星体", caption: "类星体是位于某些星系中心的超大质量黑洞。当它们吸积周围的气体和恒星时，会变得极其明亮，可以在整个宇宙中被观测到。它们的光呈蓝色。"},
     4: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/4.5.jpeg", header: "红移椭圆星系", caption: "随着宇宙膨胀，光子被拉伸，天体看起来更红。椭圆星系就是这种情况。在这些距离上，它们在我们看来呈红色。由于我们不再能探测到较暗的旋涡星系，丝状结构变得不太明显。"},
     5: {img: "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/1.8.jpeg", header: "椭圆星系", caption: "椭圆星系呈黄色，比旋涡星系明亮得多。我们可以在更远处看到它们。"},

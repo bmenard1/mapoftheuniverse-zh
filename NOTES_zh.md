@@ -29,8 +29,13 @@ Left as-is (English) per instructions. This includes: poster type names (Multisc
 - **Banner-Sidebar.jpg**, all map overlay images, skyview images, explanation images: These are astronomical photographs or data visualizations. Text-free or contain only minimal technical annotations. Kept as original external URLs.
 - No images are committed in the source repo; all are hosted on the JHU server.
 
-### Blocker
-The JHU image server (`menard.pha.jhu.edu`) returns 403 Forbidden for all direct HTTP requests to image URLs, preventing download, inspection, and potential replacement of images with embedded English text. This is the primary reason no replacement images were generated.
+### RESOLVED (2026-05-23 follow-up)
+The earlier 403 was Cloudflare bot-blocking of scripted requests, not a real block — a real browser passes. Both text-candidate images were retrieved via browser and inspected:
+- **Logo3.png** (965×253): DID contain English text "The map of the observable Universe". REPLACED with a Chinese logo `images/Logo3_zh.png` (`可观测的` small over large `宇宙地图`, white on transparent, Hiragino Sans GB W3 light to match the thin original). All 3 references in index.html repointed to the local file.
+- **test_82.png** (2061×10229): inspected top/middle/bottom — it is PURELY the artistic data visualization (CMB strip → galaxy distribution → cosmic web). NO baked-in English text. Left as original external URL; no replacement needed. (Surrounding captions are HTML, already translated.)
+
+### Blocker (historical)
+The JHU image server (`menard.pha.jhu.edu`) returns 403 Forbidden for scripted HTTP requests (curl/python) due to Cloudflare bot management. Fetch via a real browser (Chrome) succeeds.
 
 ## Technical notes
 - CNAME file intentionally not copied (no domain assigned for Chinese version yet)

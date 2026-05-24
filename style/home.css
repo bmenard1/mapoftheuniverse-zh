@@ -32,7 +32,7 @@ a {
     display:block;
 }
 .dropdown-item {
-    position: relative;-
+    position: relative;
 }
 
 .download-modal-body img{
@@ -152,7 +152,6 @@ body {
     height: 300vh
 }
 hr {
-    border-color: var(--grey);
     border-color: white;
 }
 .black-separator{
@@ -184,7 +183,7 @@ hr {
 .hr-text {
     display: flex;
     flex-direction: row;
-    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+    /*font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif;*/
 
     font-weight: 400;
     font-size: 10pt;
@@ -886,7 +885,6 @@ input[type=radio]:checked + label {
     position: relative;
     max-width:100vw;
     max-height:110vh;
-    
 }
 
 .banner-information {
@@ -981,17 +979,17 @@ h1 {
     padding: 3%;
 }
 .download-card > p{
-    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+    /*font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif;*/
 
     font-size: large;
     color: rgb(215, 215, 215);
 
 }
 p {
-    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+    /*font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif;*/
     font-size: 10pt;
     line-height: normal;
-    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+    /*font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif;*/
 
 }
 
@@ -1584,7 +1582,7 @@ p {
     color:rgb(152, 152, 152);
     font-size: 10pt;
     display: inline-block;
-    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+    /*font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif;*/
     font-weight: 400;
     text-decoration: underline;
     text-underline-position: from-font;
@@ -1983,9 +1981,29 @@ border: solid white 3px;
 
 
 
+/* Mobile inset banners (.d-md-none version) — these were originally id="banner-info-N"
+   shared with the desktop sidebar entries. After the html-cleanup pass renamed the
+   mobile-only divs to phone-banner-N to remove the duplicate-ID HTML violation, the
+   #banner-info-N positioning rules above stopped applying to them, so they collapsed
+   on top of each other. Mirroring the desktop top:% values keeps them spaced along
+   the banner-outline timeline. */
 #phone-banner-1 {
     top: 1% !important;
-
+}
+#phone-banner-2 {
+    top: 11%;
+}
+#phone-banner-3 {
+    top: 32%;
+}
+#phone-banner-4 {
+    top: 55%;
+}
+#phone-banner-5 {
+    top: 76%;
+}
+#phone-banner-6 {
+    top: 89%;
 }
 #lookback-tick-01{
     top:0%
@@ -2181,7 +2199,7 @@ border: solid white 3px;
 .dropdown-menu {
     font-size: 15pt;
     font-weight: 100;
-    font-family: "Noto Sans SC", "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
     width: 45vw;
     text-align: center;
 

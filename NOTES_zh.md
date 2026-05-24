@@ -42,3 +42,6 @@ The JHU image server (`menard.pha.jhu.edu`) returns 403 Forbidden for scripted H
 - Google Analytics tag kept as-is (same tracking ID)
 - All external CDN links (Bootstrap, jQuery, Popper.js) unchanged
 - No structural HTML changes; only text content was modified
+
+## Rebuilt on canonical codebase (2026-05-23)
+The zh site was originally forked from the OLD jQuery version. To match the scroll behavior of the canonical site (mapoftheuniverse.net), the whole site was rebuilt on the current canonical source (vanilla-JS / Bootstrap-5 rewrite, no jQuery): index.html, code/code.js, style/, 404.html, robots.txt copied from bmenard1/mapoftheuniverse, then re-translated. ONLY human-readable text was translated — all JS logic, ids, classes, and structure are byte-identical to canonical (verified: code.js differs only in title/caption/header string literals; class/id multiset identical). Therefore scroll/zoom/carousel behavior matches canonical exactly. Chinese logo (images/Logo3_zh.png) reused. Poster/download section left English per original instruction. node --check passes.

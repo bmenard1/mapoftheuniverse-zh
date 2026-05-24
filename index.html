@@ -1,0 +1,1596 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/blackbackground.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/input.css">
+
+    <title>宇宙地图</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZFQVBFNYD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4ZFQVBFNYD');
+    </script>
+  </head>
+  <body>
+
+    <div class = "fluid-container">
+      <div class = "cover" style="position: relative">
+        <div class = "full-cover" style="height: 100vh; width: 100vw;">
+
+          <div class = "cover-text">
+            <img class = "cover-logo" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Logo/Logo3.png"  alt="宇宙地图"/>
+            <h1>
+              从银河系到可见宇宙的边缘
+            </h1>
+            <br>
+            <br>
+          </div>
+          <div class = "bottom-arrow">
+            <img src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/Down.svg"/>
+          </div>
+
+        </div>
+        <div class = "flavor-text" style="top:40%; position: absolute; width: 100%;">
+          <div class = "action-text">
+            天文学家已经观测了数百万个星系
+          </div>
+        </div>
+
+        <div class = "flavor-text" style="top:60%; position: absolute; width: 100%;">
+          <div class = "action-text">
+            本页上的每一个点都是一个真实的星系
+          </div>
+        </div>
+
+        <div class = "flavor-text" style="top:80%; position: absolute; width: 100%;">
+          <div class = "action-text">
+            这就是深空的模样
+          </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class = "total" style="position:relative">
+      <div class = "map-sidebar">
+        <div class = "btn-group">
+
+        </div>
+
+      </div>
+      <div class = "banner-section"  style = " display: none; padding-left: 4%; padding-right: 3%;">
+        <!-- Begin BANNER SECTION-->
+
+
+        <div class = "end-of-banner" >
+          <div class = "black-separator"></div>
+          <div class = "black-separator"></div>
+
+          <button class = "btn btn-no-outline-light banner-switch" style="padding-bottom: 2%;">
+
+            <div class = "button-text">
+              <span>             <img height="15px" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/leftthin.svg"  />
+              </span>
+              返回地图
+            </div>
+          </button>
+          <hr/>
+
+          <div class = "black-separator"></div>
+
+
+        </div>
+        <div class = "black-separator"></div>
+      <div class = "row">
+        <div class=" col-md-2 col-xs-2  d-none d-lg-block ">
+        </div>
+        <div class="col-lg-7 col-md-9 col-xs-1 col-12">
+          <div class = "banner-edges" class = "position: relative" style = "padding-left: 2%; padding-right: 0%; padding-bottom: 10%; text-align: center;">
+            我们无法看到此处之外的任何事物。<br>光传播到我们这里所需的时间超过了宇宙的年龄。
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-1 col-2 d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="row" style="padding-left: 1%; padding-right: 1%;">
+        <div class = " col-md-2 col-xs-2  d-none d-lg-block ">
+          <div class = "banner-sidebar" >
+            <div class = "row" style="padding-bottom: 5%;">
+              <div class = "col" style=" text-align: center !important;">
+                <h1 class = "sidebar-counter "> <span id = "sidebar-lookback-time" class = "counter"></span> </h1>
+                <h1 class = "sidebar-counter billions">十亿年前</h1>
+              </div>
+            </div>
+
+
+            <div class = "row" style="">
+              <div class = "col-4" style="position: relative;">
+                <div id = "lookback-tick-01"  class = "banner-tick right sidebar-tick">
+                  13.7
+                </div>
+                <div id = "lookback-tick-02"  class = "banner-tick right sidebar-tick">
+                  12
+                </div>
+                <div id = "lookback-tick-03"  class = "banner-tick right sidebar-tick">
+                  10
+                </div>
+
+                <div id = "lookback-tick-04"  class = "banner-tick right sidebar-tick">
+                  8
+                </div>
+
+                <div id = "lookback-tick-05"  class = "banner-tick right sidebar-tick">
+                  6
+                </div>
+
+                <div id = "lookback-tick-06"  class = "banner-tick right sidebar-tick">
+                  4
+                </div>
+
+                <div id = "lookback-tick-07"  class = "banner-tick right sidebar-tick">
+                  2
+                </div>
+
+                <div id = "lookback-tick-08"  class = "banner-tick right sidebar-tick">
+                  0
+                </div>
+              </div>
+              <div class = "col" style="text-align: left !important;">
+                <div class = "banner-navigator" style="float:none !important">
+                  <img height="100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Banner/Banner-Sidebar.jpg"  />
+                  <div class = "banner-navigator-section">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-9 col-xs-1 col-12" style="position: relative;">
+          <div class = "RETURN" style="text-align: center;">
+            <button class = "btn btn-no-outline-light return-button banner-switch">
+              <img height="15px" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/left.svg"/>
+            </button>
+          </div>
+
+
+        <div class = "scroll-up-message">
+          <img data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/Down.svg" style="-webkit-transform: scaleY(-1); transform: scaleY(-1);"  />
+          <h1>
+            向上滚动穿越宇宙
+          </h1>
+
+        </div>
+          <div class = "banner-box">
+            <div class = "banner-outline">
+              <div class = "bar_container">
+
+              <div class = "phone-counter-out">
+                <div class = "phone-counter d-lg-none">
+                  <h1 class = "counter" style="text-align: left"> <span id = "sidebar-lookback-time_2"></span> </h1>
+                  <h1 class = "billions" style="text-align: left">十亿年前</h1>
+                  <div id = "barone" class = "desktop_bar "></div>
+                </div>
+              </div>
+
+                <div id = "barone" class = "desktop_bar d-none d-lg-block"></div>
+                <div id = "bartwo" class = "desktop_bar two d-none d-lg-block"></div>
+              </div>
+              <div class = "d-md-none">
+                <div id = "phone-banner-1" class = "phone-banner-box">
+                  <h2>可观测宇宙的边缘</h2>
+                </div>
+                <div id = "banner-info-2" class = "phone-banner-box">
+                  <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/black hole lower res.jpeg"  lazy/>
+                  <h2>红移类星体</h2>
+                </div>
+                <div id = "banner-info-3" class = "phone-banner-box">
+                  <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/black hole blue lower res.jpeg" lazy />
+                  <h2>类星体</h2>
+                </div>
+                <div id = "banner-info-4" class = "phone-banner-box">
+                  <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Red Mosaic lower res.jpeg" lazy />
+                  <h2>红移椭圆星系</h2>
+                </div>
+                <div id = "banner-info-5" class = "phone-banner-box">
+                  <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Ellipse Mosaic yellow.jpeg"  lazy/>
+                  <h2>椭圆星系</h2>
+                </div>
+                <div id = "banner-info-6" class = "phone-banner-box">
+                  <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Spiral Mosaic bluer.jpeg"  />
+                  <h2>旋涡星系</h2>
+                </div>
+
+
+              </div>
+              <img id = "test_image" data-src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Banner/test_82.png" width="100%" />
+            </div>
+            <div class = "banner-edges" style="position: relative; text-align: center;"  >
+              我们的银河系
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-xs-1 col-2 d-none d-md-block" style="position: relative;">
+          <div id = "banner-info-1" class = "banner-info-box ">
+            <img style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/cmbthin.jpeg"  />
+
+            <h1>可观测宇宙的边缘</h1>
+            <p class = "" style="text-align: left;">
+              这是大爆炸后不久发出的第一道闪光的真实照片，距今137亿年前。这道光已被宇宙膨胀拉伸，以无线电波的形式到达我们这里。
+              它被称为宇宙微波背景辐射。
+              <span class = "term-hover">查看天空视图。</span>
+
+            </p>
+
+          </div>
+
+          <div id = "banner-info-2" class = "banner-info-box">
+            <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/black hole lower res.jpeg"  />
+            <img class = "skyview_image" style= "width: 100%; aspect-ratio: 4 / 3; object-fit:cover;" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/12.jpeg"  />
+
+
+            <h1>红移类星体</h1>
+            <p class = "">
+              在这些距离上，宇宙的膨胀如此剧烈，以至于类星体发出的蓝色光子被拉伸而显得更红。
+              再远一些，我们会遇到一个时期——宇宙中充满了阻止可见光传播的氢气，我们今天无法观测到那时的可见光。这个时期被称为"黑暗时代"。
+              <span class = "term-hover">查看天空视图。</span>
+            </p>
+
+          </div>
+
+        <div id = "banner-info-3" class = "banner-info-box">
+          <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/black hole blue lower res.jpeg"  />
+          <img class = "skyview_image" style= "width: 100%; aspect-ratio: 4 / 3; object-fit:cover;" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/8.5.jpg"  />
+
+          <h1>类星体</h1>
+          <p class = "">
+            类星体是位于某些星系中心的超大质量黑洞。
+            当它们吸积周围的气体和恒星时，会变得极其明亮，可以在整个宇宙中被观测到。它们的光呈蓝色。
+            <span class = "term-hover">查看天空视图。</span>
+
+          </p>
+
+        </div>
+        <div id = "banner-info-7" class = "banner-info-text">
+          <p>
+            超过这个距离，星系变得更难以观测。然而，我们仍然可以看到类星体——它们更加明亮，且偏蓝色。
+          </p>
+        </div>
+        <div id = "banner-info-4" class = "banner-info-box">
+          <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Red Mosaic lower res.jpeg"  />
+          <img class = "skyview_image" style= "width: 100%; aspect-ratio: 4 / 3; object-fit:cover;" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/4.5.jpeg"  />
+
+          <h1>红移椭圆星系</h1>
+          <p class = "">
+            随着宇宙膨胀，光子被拉伸，天体看起来更红。
+            椭圆星系就是这种情况。在这些距离上，
+            它们在我们看来呈红色。由于我们不再能探测到较暗的旋涡星系，
+            丝状结构变得不太明显。<span class = "term-hover">查看天空视图。</span>
+
+          </p>
+
+        </div>
+
+        <div id = "banner-info-5" class = "banner-info-box">
+          <img class = "explanation_image" style= "width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Ellipse Mosaic yellow.jpeg"  />
+          <img class = "skyview_image" style= "width: 100%; aspect-ratio: 4 / 3; object-fit:cover;" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/1.8.jpeg"  />
+
+          <h1>椭圆星系</h1>
+          <p class = "">
+            椭圆星系呈黄色，比旋涡星系明亮得多。我们可以在更远处看到它们。
+            <span class = "term-hover">查看天空视图。</span>
+
+          </p>
+
+        </div>
+
+        <div id = "banner-info-6" class = "banner-info-box">
+            <img class = "explanation_image" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Spiral Mosaic bluer.jpeg"  />
+            <img class = "skyview_image" style= "width: 100%; aspect-ratio: 4 / 3; object-fit:cover;" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/V_01/0.1.jpeg"  />
+
+            <h1>旋涡星系</h1>
+            <p class = "">
+              每个点都是一个以其表观颜色显示的星系。
+              旋涡星系较暗且呈蓝色。我们的银河系
+              就是一个蓝色的旋涡星系，如果我们能从外部观察它，
+              它看起来就像其中之一。
+              <span class = "term-hover">查看天空视图。</span>
+
+            </p>
+
+        </div>
+      </div>
+
+      </div>
+    <!-- END BANNER SECTION-->
+    <div class = "black-separator" style="height: 10vh;"></div>
+    </div>
+    </div>
+ <!-- START OF MAP SECTION-->
+ <div class = "map-section">
+
+  <div class = "map-container child" >
+    <div class = "map-download-box">
+      <div class = "scroll-to-map">
+
+      <div class = "mapbox">
+
+        <div id = "axis_set_01" class = "axis_set">
+          <div id = "map_time_01" class = "slice-map-text lookback-time-axis">2</div>
+          <div id = "map_time_02" class = "slice-map-text lookback-time-axis">4</div>
+          <div id = "map_time_07" class = "slice-map-text lookback-time-axis">6</div>
+          <div id = "map_time_03" class = "slice-map-text lookback-time-axis">8</div>
+          <div id = "map_time_04" class = "slice-map-text lookback-time-axis">10</div>
+          <div id = "map_time_05" class = "slice-map-text lookback-time-axis">12</div>
+          <div id = "map_time_06" class = "slice-map-text lookback-time-axis">13.7</div>
+
+          <div id = "map_red_01" class = "slice-map-text redshift-axis">0.2</div>
+          <div id = "map_red_02" class = "slice-map-text redshift-axis">0.5</div>
+          <div id = "map_red_03" class = "slice-map-text redshift-axis">1</div>
+          <div id = "map_red_04" class = "slice-map-text redshift-axis">2</div>
+          <div id = "map_red_05" class = "slice-map-text redshift-axis">5</div>
+
+
+          <div id = "text_01" class = "slice-map-text you-are-here-axis">你在这里</div>
+          <div id = "text_02" class = "slice-map-text angle-on-sky-axis">天球角度</div>
+          <div id = "text_03" class = "slice-map-text redshift-axis">红移</div>
+          <div id = "text_04" class = "slice-map-text lookback-time-axis">回溯时间 <br> [十亿年]</div>
+
+          <div id = "map_angle_01" class = "slice-map-text angle-on-sky-axis">0°</div>
+          <div id = "map_angle_03" class = "slice-map-text angle-on-sky-axis">60°</div>
+          <div id = "map_angle_04" class = "slice-map-text angle-on-sky-axis">90°</div>
+          <div id = "map_angle_02" class = "slice-map-text angle-on-sky-axis">30°</div>
+
+        </div>
+
+
+        <div id = "axis_set_02" class = "axis_set"  >
+
+          <div id = "map_time_02_01" class = "slice-map-text lookback-time-axis">1</div>
+          <div id = "map_time_02_02" class = "slice-map-text lookback-time-axis">2</div>
+          <div id = "map_time_02_03" class = "slice-map-text lookback-time-axis">3</div>
+          <div id = "map_time_02_04" class = "slice-map-text lookback-time-axis">4</div>
+
+          <div id = "map_red_02_01" class = "slice-map-text lookback-time-axis">0.1</div>
+          <div id = "map_red_02_02" class = "slice-map-text lookback-time-axis">0.2</div>
+          <div id = "map_red_02_03" class = "slice-map-text lookback-time-axis">0.3</div>
+          <div id = "map_red_02_04" class = "slice-map-text lookback-time-axis">0.4</div>
+
+          <img id = "close_from_outer" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/hover_close_from_outer.jpg"  >
+
+          <img id = "near_from_outer" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/near_from_outer.jpg"  >
+
+          <img id = "outer-overlay" class = "test-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/outer.jpg"  >
+
+          <div id = "text_01" class = "slice-map-text you-are-here-axis">你在这里</div>
+          <div id = "text_02" class = "slice-map-text angle-on-sky-axis">天球角度</div>
+          <div id = "text_03" class = "slice-map-text redshift-axis">红移</div>
+          <div id = "text_04" class = "slice-map-text lookback-time-axis">回溯时间 <br> [十亿年]</div>
+
+          <div id = "map_angle_01" class = "slice-map-text angle-on-sky-axis">0°</div>
+          <div id = "map_angle_03" class = "slice-map-text angle-on-sky-axis">60°</div>
+          <div id = "map_angle_04" class = "slice-map-text angle-on-sky-axis">90°</div>
+          <div id = "map_angle_02" class = "slice-map-text angle-on-sky-axis">30°</div>
+
+        </div>
+
+        <div id = "axis_set_04" class = "axis_set" >
+
+          <div id = "map_time_04_01" class = "slice-map-text lookback-time-axis">0.1</div>
+          <div id = "map_time_04_02" class = "slice-map-text lookback-time-axis">0.2</div>
+          <div id = "map_red_04_01" class = "slice-map-text lookback-time-axis">0.005</div>
+          <div id = "map_red_04_02" class = "slice-map-text lookback-time-axis">0.01</div>
+          <div id = "map_red_04_03" class = "slice-map-text lookback-time-axis">0.015</div>
+          <img id = "near-overlay" class = "test-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/close.png"  >
+          <div id = "text_01" class = "slice-map-text you-are-here-axis">你在这里</div>
+          <div id = "text_02" class = "slice-map-text angle-on-sky-axis">天球角度</div>
+          <div id = "text_03" class = "slice-map-text redshift-axis">红移</div>
+          <div id = "text_04" class = "slice-map-text lookback-time-axis">回溯时间 <br> [十亿年]</div>
+
+          <div id = "map_angle_01" class = "slice-map-text angle-on-sky-axis">0°</div>
+          <div id = "map_angle_03" class = "slice-map-text angle-on-sky-axis">60°</div>
+          <div id = "map_angle_04" class = "slice-map-text angle-on-sky-axis">90°</div>
+          <div id = "map_angle_02" class = "slice-map-text angle-on-sky-axis">30°</div>
+
+        </div>
+
+        <div id = "axis_set_05" class = "axis_set">
+          <img id = "near-overlay" class = "test-map-overlay" src = "https://bmenard1.github.io/mapoftheuniverse/Images/Hover Map/Galaxy_View.png">
+        </div>
+
+        <div id = "axis_set_03" class = "axis_set" >
+
+          <div id = "map_time_03_01" class = "slice-map-text lookback-time-axis">0.2</div>
+          <div id = "map_time_03_02" class = "slice-map-text lookback-time-axis">0.4</div>
+          <div id = "map_time_03_03" class = "slice-map-text lookback-time-axis">0.6</div>
+          <div id = "map_time_03_04" class = "slice-map-text lookback-time-axis">0.8</div>
+          <div id = "map_time_03_05" class = "slice-map-text lookback-time-axis">1.0</div>
+
+          <div id = "map_red_03_01" class = "slice-map-text lookback-time-axis">0.02</div>
+          <div id = "map_red_03_02" class = "slice-map-text lookback-time-axis">0.04</div>
+          <div id = "map_red_03_03" class = "slice-map-text lookback-time-axis">0.06</div>
+          <img id = "close_from_near" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/hover_close_from_near.jpg"  >
+
+          <img id = "near-overlay" class = "test-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/near.jpg"  >
+          <div id = "text_01" class = "slice-map-text you-are-here-axis">你在这里</div>
+          <div id = "text_02" class = "slice-map-text angle-on-sky-axis">天球角度</div>
+          <div id = "text_03" class = "slice-map-text redshift-axis">红移</div>
+          <div id = "text_04" class = "slice-map-text lookback-time-axis">回溯时间 <br> [十亿年]</div>
+
+          <div id = "map_angle_01" class = "slice-map-text angle-on-sky-axis">0°</div>
+          <div id = "map_angle_03" class = "slice-map-text angle-on-sky-axis">60°</div>
+          <div id = "map_angle_04" class = "slice-map-text angle-on-sky-axis">90°</div>
+          <div id = "map_angle_02" class = "slice-map-text angle-on-sky-axis">30°</div>
+
+        </div>
+
+
+
+        <div id = "black-overlay"></div>
+        <img id = "outer_from_full" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/hover_outer_from_full.jpg">
+        <img id = "near_from_full" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/hover_near_from_full.jpg"  >
+        <img id = "close_from_full" class = "hover-map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Hover Map/hover_close_from_full.jpg"  >
+        <img id = "overlay" class = "map-overlay" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/WebMap_V02/total_line_transparent.png"  >
+
+
+        <img id = "slice-map" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/WebMap_V02/total.png"  />
+
+      </div>
+
+      <div style="width: 100%; position: absolute; bottom:12%; z-index: 5; padding-left: 0; padding-right: 0;">
+        <div class="row align-items-end d-none d-lg-flex"  style = "width: 100%; text-align: left; z-index: 5; --bs-gutter-x: 0 rem; padding-left: 2%; padding-right: 2%;">
+          <div class="info-col col-3 col-lg-3">
+            <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Logo/Logo3.png" style="width: 300px"  />
+          </div>
+
+          <div class="other-col col-6 col-lg-6">
+          </div>
+
+          <div class="this-col col-3 col-lg-3 this-col-change" style="text-align: right;">
+            <div class = "row selector-row" style="width: 100%; margin: 0%; padding: 0%;">
+              <div class = "zoom-container">
+
+                <div class = "btn zoom-icon minus-icon">
+                </div>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="near_galaxy_view" value="5" autocomplete="off" >
+                <label id = "near_galaxy_view_label" class="btn zoom_button select-button " for="near_galaxy_view">
+                </label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="close" value="4" autocomplete="off" >
+                <label id = "close_label" class="btn zoom_button select-button " for="close">
+                </label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="near" autocomplete="off" value="1">
+
+                <label id = "near_label" class="btn zoom_button select-button " for="near">
+
+                </label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="outer" value="2"  autocomplete="off">
+                <label id = "outer_label" class="btn zoom_button select-button" for="outer">
+                  </label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="full"  value="3"  autocomplete="off" checked>
+                <label id = "full_label" class="btn zoom_button select-button" for="full" >
+                </label>
+
+
+                <div class = "btn  zoom-icon plus-icon">
+                </div>
+
+              </div>
+
+             </div>
+
+            <div class = "smaller" style="width: 90%; text-align: right; display: inline-block;">
+            <hr/>
+
+            <button class = " btn btn-no-outline-light banner-switch banner-switch-hover banner-extra" style="background-color: black !important; width: 100%;">
+              <div class = "accordion-button-custom" style="text-align: right;">
+              探索地图
+            </div>
+            </button>
+            <hr/>
+
+
+            <div class="accordion description" id="accordionExample3">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class=" accordion-button accordion-button-custom desc-custom collapsed info-accordion" dir="rtl" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <div class = "accordion-button-custom">说明</div>
+                  </button>
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample3">
+                  <div class="accordion-body">
+                    <div class = "info-box">
+
+                      <div class="accordion" id="small_accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingOne">
+                            <button class="accordion-button small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseOne" aria-expanded="true" aria-controls="small_collapseOne">
+                              这张地图是什么？
+                            </button>
+                          </h2>
+                          <div id="small_collapseOne" class="accordion-collapse collapse show" aria-labelledby="small_headingOne" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <div class = "first-point">
+
+                              <p>
+                                这张地图展示了我们宇宙的一个切片。它由天文观测数据绘制而成——使用位于美国新墨西哥州的望远镜，历经15年、夜复一夜地收集数据。我们位于底部。顶部是可观测宇宙的实际边缘。在两者之间，我们可以看到大约20万个星系。
+                                <br/>
+                                <video src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/3D/3d slice rotating.mp4" autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo2" width="100%"  poster="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Universe_3D.jpg" > </video>
+
+                                <br/>
+                                完整的地图实际上是一个球体。这个可视化展示的是宇宙的一个薄切片，厚度约为10度。虽然有更多的天文数据可用，但无法在一张二维地图上同时展示所有数据——图像将会被密密麻麻的点完全覆盖。
+
+                              </p>
+                              <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Universe_3D.jpg"  >
+                            </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingTwo">
+                            <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseTwo" aria-expanded="false" aria-controls="small_collapseTwo">
+                              这些点是什么？
+                            </button>
+                          </h2>
+                          <div id="small_collapseTwo" class="accordion-collapse collapse" aria-labelledby="small_headingTwo" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <p>
+                              <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Galaxy is Point 2.jpeg"  >
+                              每个微小的点都是一个星系。图中展示了约20万个星系，显示的是它们的实际位置和颜色。每个星系包含数十亿颗恒星和行星。我们位于底部。我们的银河系也只是一个点。向上望去，我们可以看到太空中充满了星系，它们组成了一个宏大的丝状结构。离我们越远（在地图上越靠上方），丝状结构越难以分辨。
+                            </p>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingThree">
+                            <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseThree" aria-expanded="false" aria-controls="small_collapseThree">
+                              为什么颜色在变化？
+                            </button>
+                          </h2>
+                          <div id="small_collapseThree" class="accordion-collapse collapse" aria-labelledby="small_headingThree" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <p>
+                              宇宙随时间膨胀。这种膨胀拉伸了光的波长。天体越远，在我们看来就越红。
+                              <br>
+                              地图显示了两个从蓝到红的红移序列：一个是<span id = "area_05" class = "map-effect term-hover">星系（下半部分）</span>，另一个是<span id = "area_03" class = "map-effect term-hover">类星体（上半部分）</span>。
+
+                              <br>
+                              <br>
+                              <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Redshift@300x.jpg"  >
+                              <br>
+                              <br>
+                            </p>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingFour">
+                            <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseFour" aria-expanded="false" aria-controls="small_collapseFour">
+                              为什么有一个边缘？
+                            </button>
+                          </h2>
+                          <div id="small_collapseFour" class="accordion-collapse collapse" aria-labelledby="small_headingFour" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <p>
+
+                              地图顶部展示的是大爆炸后不久发出的第一道辐射闪光。这发生在137亿年前。如今我们观测到的这些辐射已不是可见光，而是无线电波。
+                              它被称为宇宙微波背景辐射。
+                                <it>它是可观测宇宙的边缘。</it>
+                                在那之外发出的任何光线尚未到达我们这里，因为其传播时间超过了宇宙的年龄。
+                              <br>
+                              <br>
+                              <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/cmb_illust_2.jpg"  >
+
+                            </p>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingFive">
+                            <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseFive" aria-expanded="false" aria-controls="small_collapseFive">
+                              为什么我们在中心？
+                            </button>
+                          </h2>
+                          <div id="small_collapseFive" class="accordion-collapse collapse" aria-labelledby="small_headingFive" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/3D/3D.jpg"  >
+
+                              <p>
+                              我们的银河系在太空中并不处于任何特殊位置。宇宙的膨胀和红移效应使得所有其他星系在我们向更远处观察时显得更红。如果我们从另一个星系观察宇宙，这张地图看起来也会非常相似。
+                            </p>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="small_headingSix">
+                            <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#small_collapseSix" aria-expanded="false" aria-controls="small_collapseSix">
+                              使用了哪台望远镜？
+                            </button>
+                          </h2>
+                          <div id="small_collapseSix" class="accordion-collapse collapse" aria-labelledby="small_headingSix" data-bs-parent="#small_accordionExample">
+                            <div class="accordion-body">
+                              <p>
+
+                              观测使用的是位于美国新墨西哥州阿帕奇点天文台的一台专用2.5米广角光学望远镜。
+                              <br/>
+                              <br>
+                              <img style="width: 100%" data-src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Sloan Telescope.jpeg"  >
+                              <br>
+                              <br>
+
+                              这个项目叫做斯隆数字巡天（Sloan Digital Sky Survey）。它已经运行了20多年，观测了数百万个星系。这张地图只使用了所有可用数据的一部分。
+
+                              <br/>
+                              宇宙微波背景辐射是由欧洲空间局的普朗克（Planck）太空望远镜观测的。
+                            </p>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+
+            <div class="dropup " style="text-align: center; display: inline-block; width: 100%;">
+              <button class="btn btn-no-outline-light download-button  dropdown-toggle popup" style="background-color: black !important; width: 100%;" type="button" id="dropdownMenuButton2" data-bs-display="static"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"  >
+                <div class = "accordion-button-custom" style="text-align: right;">
+                  download & poster
+                </div>
+              </button>
+              <ul class="download-dropdown dropdown-menu dropdown-menu-dark dropdown-menu-center dropdown-laptop" aria-labelledby="dropdownMenuButton2" >
+                <form>
+                <div class = "row">
+
+                  <div class = "col" style="border-right: 1px solid var(--grey); overflow: hidden;">
+                    <h1>Multiscale</h1>
+                    <div class = "dropdown-item" style="height: 90%;">
+                      <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/MapoftheUniverse_multiscale_thumbnail.jpg" style="height: 100%; object-fit: cover;"  />
+                      <div class = "download-click-section">
+                        <div class = "row download-row vertical-row">
+                          <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+                        </div>
+                        <div class = "row download-row vertical-row">
+                          <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-4k.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+                        </div>
+                        <div class = "row download-row vertical-row">
+                          <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-8k.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+                        </div>
+                        <div class = "row download-row vertical-row">
+                          <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-3-zoom-levels-by-scientific-viz/134357219.G7H47" target="_blank" rel="noopener noreferrer">
+                            order a poster
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "col" style="border-right: 1px solid var(--grey);">
+                    <div class = "row" >
+                      <h1>Vertical Banner</h1>
+                      <div class = "dropdown-item">
+                        <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_vertical_banner.jpeg"  />
+                        <div class = "download-click-section">
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132238689.G7H47" target="_blank" rel="noopener noreferrer">
+                              order a poster
+                            </a>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <li><hr class="dropdown-divider"></li>
+                    <div class = "row">
+                      <h1>Horizontal Banner</h1>
+                      <div class = "dropdown-item">
+                        <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_horizontal_banner.jpeg"  />
+                        <div class = "download-click-section">
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132238837.G7H47" target="_blank" rel="noopener noreferrer">
+                              order a poster
+                            </a>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "col">
+                    <div class = "row">
+                      <h1>Beautiful</h1>
+                      <div class = "dropdown-item">
+                        <img  src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/2K Thumbnail.jpg"  />
+                        <div class = "download-click-section">
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+                          </div>
+                          <div class = "row download-row vertical-row">
+                            <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132237472.G7H47" target="_blank" rel="noopener noreferrer">
+                              order a poster
+                            </a>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <li><hr class="dropdown-divider"></li>
+                    <div class = "row">
+                      <h1>Educational</h1>
+                      <div class = "dropdown-item">
+
+                      <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/Poster Thumbnail.jpg"  />
+
+                        <div class = "download-click-section">
+                          <div class = "row download-row">
+
+                            <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-educational-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+                          </div>
+                          <div class = "row download-row">
+                            <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132237651.G7H47" target="_blank" rel="noopener noreferrer">
+                              order a poster
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+
+                  <li><hr class="dropdown-divider"></li>
+                    <div class = "row">
+                      <div class = "col" >
+                        <div class = "download-info">
+                          仅供非商业用途。
+                          如需商业使用，请联系 <a href = "mailto:mapoftheuniverse.net@gmail.com" target="_blank">MapoftheUniverse.net@gmail.com</a>。
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                </form>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class = "d-lg-none" style="padding-left: 4%; padding-right: 4%; text-align: left;">
+        <br/>
+
+        <!--
+
+        -->
+        <hr/>
+        <br/>
+
+        <div style="height: 10vh;" >
+          <div class = "zoom-container" style="height: 100%; text-align: center;">
+            <div class = "btn  zoom-icon minus-icon">
+            </div>
+
+            <input type="radio" class="btn-check" name="options-outlined2" id="near_galaxy_view2" value="5" autocomplete="off" >
+            <label id = "near_galaxy_view_label" class="btn zoom_button select-button " for="near_galaxy_view2" >
+            </label>
+
+
+            <input type="radio" class="btn-check" name="options-outlined2" id="close2" value="4" autocomplete="off" >
+            <label id = "close_label" class="btn zoom_button select-button " for="close2">
+            </label>
+
+            <input type="radio" class="btn-check" name="options-outlined2" id="near2" autocomplete="off" value="1">
+
+            <label id = "near_label" class="btn zoom_button select-button " for="near2">
+
+            </label>
+
+            <input type="radio" class="btn-check" name="options-outlined2" id="outer2" value="2"  autocomplete="off">
+
+            <label id = "outer_label" class="btn zoom_button select-button" for="outer2">
+              </label>
+            <input type="radio" class="btn-check" name="options-outlined2" id="full2"  value="3"  autocomplete="off" checked>
+            <label id = "full_label" class="btn zoom_button select-button" for="full2" >
+            </label>
+
+            <div class = "btn  zoom-icon plus-icon">
+            </div>
+          </div>
+        </div>
+
+        <!--
+
+        <div class = "row selector-row" style="width: 100%; margin: 0%;">
+
+          <div style="margin-top: 20px;"></div>
+          <div class = "col" >
+            <input type="radio" class="btn-check" name="options-outlined2" id="close2" autocomplete="off" value="4"  >
+            <label class="btn accordion-button-custom select-button" for="close2">
+                close
+            </label>
+          </div>
+          <div class = "col" >
+              <input type="radio" class="btn-check" name="options-outlined2" id="near2" autocomplete="off" value="1"  >
+              <label class="btn accordion-button-custom select-button" for="near2">
+                  near
+              </label>
+            </div>
+            <div class = "col" >
+              <input type="radio" class="btn-check" name="options-outlined2" id="outer2" value="2"  autocomplete="off">
+              <label class="btn accordion-button-custom select-button" for="outer2">
+                  outer
+              </label>
+            </div>
+            <div class = "col" >
+              <input type="radio" class="btn-check" name="options-outlined2" id="full2" value="3"  autocomplete="off" checked>
+              <label class="btn accordion-button-custom select-button" for="full2">
+                  full
+              </label>
+            </div>
+        </div>
+        -->
+
+
+        <hr/>
+        <br/>
+        <img class = "phone-logo" src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Logo/Logo3.png"  />
+
+
+          <br>
+          <div class = "row">
+
+
+            <div class="accordion" id="none">
+              <div class="accordion-item">
+                <div class = "accordion-button-custom banner-switch-hover banner-extra banner-switch" style="text-align: center; border: 1px solid var(--grey);" >
+                  探索地图
+                </div>
+                  </div>
+            </div>
+
+          </div>
+
+          <p>
+
+          </p>
+
+          <div class = "row">
+            <div class="accordion description" id="phone_description_outer">
+              <div class="accordion-item">
+                <div class = "accordion-button-custom " style="text-align: center; border: 1px solid var(--grey);" type="button" data-bs-toggle="collapse" data-bs-target="#phone_description_item" aria-expanded="true" aria-controls="phone_description_outer" >
+                  说明
+                </div>
+              </div>
+              <div id="phone_description_item" class="accordion-collapse collapse" aria-labelledby="phone_description_item" data-bs-parent="#phone_description_outer">
+                <div class="accordion-body">
+                  <div class="accordion" id="phone_accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingOne">
+                        <button class="accordion-button small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseOne" aria-expanded="true" aria-controls="phone_collapseOne">
+                          这张地图是什么？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseOne" class="accordion-collapse collapse" aria-labelledby="phone_headingOne" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <p>
+
+                            这张地图展示了我们宇宙的一个切片。它由天文观测数据绘制而成——使用位于美国新墨西哥州的望远镜，历经15年、夜复一夜地收集数据。我们位于底部。顶部是可观测宇宙的实际边缘。在两者之间，我们可以看到大约20万个星系。
+                            <br/>
+                            <video src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/3D/3d slice rotating.mp4" autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo" width="100%" thumbnail poster="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Universe_3D.jpg"> </video>
+
+
+                            <br/>
+                            完整的地图实际上是一个球体。这个可视化展示的是宇宙的一个薄切片，厚度约为10度。虽然有更多的天文数据可用，但无法同时展示所有数据——地图将会被密密麻麻的点完全覆盖。
+
+                          </p>
+                          <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Universe_3D.jpg"  >
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingTwo">
+                        <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseTwo" aria-expanded="false" aria-controls="phone_collapseTwo">
+                          这些彩色的点是什么？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseTwo" class="accordion-collapse collapse" aria-labelledby="phone_headingTwo" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <p>
+                            每个微小的点都是一个星系。图中展示了约20万个星系，显示的是它们的实际位置和颜色。每个星系包含数十亿颗恒星和行星。我们位于底部。我们的银河系也只是一个点。向上望去，我们可以看到太空中充满了星系，它们组成了一个宏大的丝状结构。离我们越远（在地图上越靠上方），丝状结构越难以分辨。
+                          </p>
+
+                          <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Explanations/Galaxy is Point 2.jpeg"  >
+
+
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingThree">
+                        <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseThree" aria-expanded="false" aria-controls="phone_collapseThree">
+                          为什么颜色在变化？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseThree" class="accordion-collapse collapse" aria-labelledby="phone_headingThree" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <p>
+                          宇宙随时间膨胀。这种膨胀拉伸了光的波长。天体越远，在我们看来就越红。<br>
+                          地图显示了两个从蓝到红的红移序列：一个是<span id = "area_05" class = "map-effect term-hover">星系（下半部分）</span>，另一个是<span id = "area_03" class = "map-effect term-hover">类星体（上半部分）</span>。
+                          <br>
+                          <br>
+                          <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Redshift@300x.jpg"  >
+                          <br>
+                          <br>
+                        </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingFour">
+                        <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseFour" aria-expanded="false" aria-controls="phone_collapseFour">
+                          为什么有一个边缘？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseFour" class="accordion-collapse collapse" aria-labelledby="phone_headingFour" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <p>
+
+                          地图顶部展示的是大爆炸后不久发出的第一道辐射闪光。这发生在137亿年前。如今我们观测到的这些辐射已不是可见光，而是无线电波。它被称为宇宙微波背景辐射。它是可观测宇宙的边缘。在那之外发出的任何光线尚未到达我们这里，因为其传播时间超过了宇宙的年龄。
+                          <br>
+                          <br>
+                          <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/cmb_illust_2.jpg"  >
+
+                        </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingFive">
+                        <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseFive" aria-expanded="false" aria-controls="phone_collapseFive">
+                          为什么我们在中心？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseFive" class="accordion-collapse collapse" aria-labelledby="phone_headingFive" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <img style="width: 100%" data-src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/3D/3D.jpg">
+                          <p>
+                          我们的银河系在太空中并不处于任何特殊位置。宇宙的膨胀和红移效应使得所有其他星系在我们向更远处观察时显得更红。如果我们从另一个星系观察宇宙，这张地图看起来也会非常相似。
+                        </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="phone_headingSix">
+                        <button class="accordion-button collapsed small-accordion" type="button" data-bs-toggle="collapse" data-bs-target="#phone_collapseSix" aria-expanded="false" aria-controls="phone_collapseSix">
+                          使用了哪台望远镜？
+                        </button>
+                      </h2>
+                      <div id="phone_collapseSix" class="accordion-collapse collapse" aria-labelledby="phone_headingSix" data-bs-parent="#phone_accordionExample">
+                        <div class="accordion-body">
+                          <p>
+
+                          观测使用的是位于美国新墨西哥州阿帕奇点天文台的一台专用2.5米广角光学望远镜。
+                          <br/>
+                          <br>
+                          <img style="width: 100%" data-src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Description Images/Sloan Telescope.jpeg">
+                          <br>
+                          <br>
+
+                          这个项目叫做斯隆数字巡天（Sloan Digital Sky Survey）。它已经运行了20多年，观测了数百万个星系。这张地图只使用了所有可用数据的一部分。
+
+                          <br/>
+                          宇宙微波背景辐射是由欧洲空间局的普朗克（Planck）太空望远镜观测的。
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+
+          </div>
+
+        </p>
+
+        <div class = "row">
+          <div class="dropup " style="text-align: center; display: inline-block; width: 100%;">
+            <button class="btn btn-no-outline-light download-button  dropdown-toggle popup" style="background-color: black !important; width: 100%;" type="button" id="dropdownMenuButton2" data-bs-display="static"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"  >
+              <div class = "accordion-button-custom" style="text-align: center; border: 1px solid var(--grey);">
+                download & poster
+              </div>
+            </button>
+            <ul class="download-dropdown dropdown-menu dropdown-menu-dark dropdown-menu-center keep-open" aria-labelledby="dropdownMenuButton2">
+              <form>
+
+              <div class = "row">
+                <div class = "col">
+                  <div class = "mobile-button">
+
+                  <h1>Beautiful</h1>
+                  <div class = "dropdown-item"  data-bs-toggle="modal" data-bs-target="#download-beautiful-modal" href="#download-beautiful-modal">
+                    <img  src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/2K Thumbnail.jpg"  />
+                  </div>
+                </div>
+
+
+                </div>
+
+                <div class = "col">
+                  <div class = "mobile-button">
+
+                  <h1>Educational</h1>
+                  <div class = "dropdown-item" data-bs-toggle="modal" data-bs-target="#download-educational-modal" href="#download-educational-modal">
+                    <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/Poster Thumbnail.jpg"  />
+                  </div>
+
+                 </div>
+            </div>
+              </div>
+              <div class = "row">
+                <div class = "col" >
+                  <div class = "mobile-button">
+
+                  <h1>Multiscale</h1>
+                  <div class = "dropdown-item" data-bs-toggle="modal" data-bs-target="#download-vertical-poster-modal" href="#download-vertical-modal">
+                    <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/MapoftheUniverse_multiscale_thumbnail.jpg"  />
+                  </div>
+
+                </div>
+                </div>
+                <div class = "col" >
+                  <div class = "row">
+                    <div class = "col">
+
+                      <div class = "mobile-button">
+                        <h1>Vertical Banner</h1>
+                        <div class = "dropdown-item" data-bs-toggle="modal" data-bs-target="#download-vertical-modal" href="#download-vertical-modal">
+                          <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_vertical_banner.jpeg"  />
+                        </div>
+
+                      </div>
+                        <div class = "mobile-button">
+                        <h1>Horizontal Banner</h1>
+                        <div class = "dropdown-item" data-bs-toggle="modal" data-bs-target="#download-horizontal-modal" href="#download-horizontal-modal">
+                          <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_horizontal_banner.jpeg"  />
+                        </div>
+
+                      </div>
+
+                  </div>
+                </div>
+
+                </div>
+
+
+                <li><hr class="dropdown-divider"></li>
+
+                <div class = "row">
+                  <div class = "col" >
+                    <div class = "download-info">
+                      仅供非商业用途。
+                      如需商业使用，请联系 <a href = "mailto:mapoftheuniverse.net@gmail.com" target="_blank">MapoftheUniverse.net@gmail.com</a>。
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+
+            </ul>
+          </div>
+          <div class = "col">
+
+          </div>
+
+
+          <div class = "col">
+
+          </div>
+
+        </div>
+
+        <br>
+
+
+
+      </div>
+
+
+
+    </div>
+    <div class = "sep" style="padding-top: 5%"> </div>
+      <div class="row align-items-end d-none d-lg-flex"  style = "width: 100%; text-align: center; z-index: 5; position: absolute; bottom: 0%; padding-left: 0%; padding-right: 0%;">
+        <div class="other-col-2 col-8 col-lg-8">
+          <div class = "row" style="text-align: center;">
+            <div class = "col" style="text-align: left;">
+
+            </div>
+            <div class = "col" style="text-align: center;">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="this-col-2 col-3 col-lg-3">
+        </div>
+      </div>
+
+
+      <div class = "d-none d-md-block" style="text-align: left;">
+        <div class = "credit"style = "padding-left: 2%; padding-right: 2%; color: rgb(95, 95, 95)">
+          <hr>
+          <div class = "row">
+            <div class = "col-sm">
+              作者：<a href = "https://menard.pha.jhu.edu/">B. Ménard</a> & <a href = "https://nikitashtarkman.com/index.html">N. Shtarkman</a>，约翰斯·霍普金斯大学。
+              <a data-bs-toggle="modal" data-bs-target="#creditModal" href="#creditModal">致谢 + 联系方式</a>
+            </div>
+            <div class = "col-sm" style="text-align: right;">
+              © Ménard & Shtarkman. 版权所有
+              <br/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = ".d-block d-sm-block d-md-none"  style="text-align: left; ">
+          <div class = "credit"style = "padding-left: 2%; padding-right: 2%; color: rgb(95, 95, 95)">
+
+            <hr>
+              © Brice Ménard & Nikita Shtarkman. 版权所有
+              <br/>
+
+                作者：<a href = "https://menard.pha.jhu.edu/">B. Ménard</a> & <a href = "https://nikitashtarkman.com/index.html">N. Shtarkman</a>，约翰斯·霍普金斯大学。<br>
+                <a data-bs-toggle="modal" data-bs-target="#creditModal" href="#creditModal">致谢 + 联系方式</a>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div style="text-align: center;">
+      <div class="biocubesAD">
+        欢迎访问我们的新项目：<a href = "https://biocubes.net/">biocubes.net </a>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!--END OF MAP SECTION-->
+    <div class="modal" id="creditModal">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title">致谢 + 联系方式</h1>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body" style="padding-left:4%; padding-right: 4%;">
+            <div class = "creditModalText">
+            <p>
+              <div class = "row" style="text-align: center;">
+                <p>请通过以下方式联系我们</p>  <span> <a href = "mailto:mapoftheuniverse.net@gmail.com" target="_blank">MapoftheUniverse.net@gmail.com</a> </span>
+              </div>
+              <br>
+              <hr>
+              <div class = "row" style="text-align: center;">
+                <div class = "col" style="text-align: center;">
+                  <img src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/sdss.png" style="width: 150px"  ><br>
+
+                  星系和类星体数据来自<a href = "https://www.sdss.org/">斯隆数字巡天（SDSS）</a>。<br>
+                </div>
+                <div class = "col" style="text-align: center;">
+                  <img src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/planck.png" style="width: 150px"  ><br>
+
+                  宇宙微波背景辐射图像由<a href = "https://sci.esa.int/web/planck">普朗克卫星（Planck Satellite）</a>获取。<br>
+
+                </div>
+                <div class = "col" style="text-align: center;">
+                  <img src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Icons/jhu.png" style="width: 150px"  ><br>
+
+                  可视化由<a href = "https://www.jhu.edu/">约翰斯·霍普金斯大学</a>制作。<br>
+
+                </div>
+
+              </div>
+
+
+
+
+            </p>
+
+            <hr/>
+            <br/>
+
+            <p>
+              深场、旋涡星系和椭圆星系图像由 <a href = "https://esahubble.org/images/">ESA/Hubble & NASA</a> 提供。<br/><br/>
+              宇宙微波背景辐射图像由 <a href = "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_and_the_cosmic_microwave_background">ESA/Planck</a> 提供。<br/><br/>
+              黑洞图像由 <a href = "https://www.nasa.gov/mission_pages/chandra/news/black-hole-image-makes-history">NASA</a> 提供。<br/><br/>
+
+              SDSS 望远镜图像由 <a href = "https://sloan.org/programs/research/sloan-digital-sky-survey">Sloan Foundation</a> 提供。<br> <br>
+
+              地图上方显示的星系图像由 <a href = "http://nsatlas.org/">Nasa-Sloan Atlas</a> 提供。
+              <br/>
+            </p>
+          </div>
+          </div>
+
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <p>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h1 class="modal-title">Modal Heading</h1>
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <img style="width: 100%" src = "https://menard.pha.jhu.edu/MapoftheUniverse/Images/Skyview/SkyView_01 2.png"  />
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <p>
+                类星体是位于某些星系中心的超大质量黑洞。
+              当它们吸积周围的气体时，会变得极其明亮，可以在整个宇宙中被观测到。
+              它们的光呈蓝色。在这些距离上，星系已经变得太暗，
+              斯隆数字巡天望远镜无法观测到。
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="download-beautiful-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body download-modal-body" style="padding: 4%;">
+
+              <img  src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/2K Thumbnail.jpg"  />
+              <h2 style="text-align: center">Download Resolution</h2>
+              <hr>
+              <br>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-beautiful-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132237472.G7H47" target="_blank" rel="noopener noreferrer">
+                  order a poster
+                </a>
+              </div>
+            </div>
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="download-educational-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body download-modal-body" style="padding: 4%;">
+
+              <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/Poster Thumbnail.jpg"  />
+              <h2 style="text-align: center">Download Resolution</h2>
+              <hr>
+              <br>
+              <br>
+
+
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-educational-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132237651.G7H47" target="_blank" rel="noopener noreferrer">
+                  order a poster
+                </a>
+            </div>
+            </div>
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal" id="download-horizontal-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body download-modal-body" style="padding: 4%;">
+
+              <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_horizontal_banner.jpeg"  />
+              <h2 style="text-align: center">Download Resolution</h2>
+              <hr>
+              <br>
+              <br>
+
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-horizontal-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132238837.G7H47" target="_blank" rel="noopener noreferrer">
+                  order a poster
+                </a>
+            </div>
+            </div>
+
+
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="download-vertical-poster-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body download-modal-body" style="padding: 4%; text-align: center;">
+              <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/MapoftheUniverse_multiscale_thumbnail.jpg" style="height: 60vh; width: auto;"  />
+              <h2 style="text-align: center">Download Resolution</h2>
+              <hr>
+              <br>
+              <br>
+
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-4k.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-multiscale-8k.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-3-zoom-levels-by-scientific-viz/134357219.G7H47" target="_blank" rel="noopener noreferrer">
+                  order a poster
+                </a>
+            </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal" id="download-vertical-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body download-modal-body" style="padding: 4%;">
+              <img src="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Thumbnails/thumbnail_vertical_banner.jpeg"  />
+              <h2 style="text-align: center">Download Resolution</h2>
+              <hr>
+              <br>
+              <br>
+
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-2k.png" download target="_blank" rel="noopener noreferrer">medium (2k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col"  href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-thin.png" download target="_blank" rel="noopener noreferrer">high (4k)</a>
+              </div>
+              <div class = "row download-row">
+                <a class = "col" href="https://menard.pha.jhu.edu/MapoftheUniverse/Images/Deliverables/Files/MapoftheUniverse-vertical-print.png" download target="_blank" rel="noopener noreferrer">very high (8k)</a>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class = "row download-row">
+                <a class = "col" href="https://www.redbubble.com/i/poster/Map-of-the-Universe-by-scientific-viz/132238689.G7H47" target="_blank" rel="noopener noreferrer">
+                  order a poster
+                </a>
+            </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+    integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script src="code/code.js"></script>
+</body>
+</html>
